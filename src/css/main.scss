@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import 'swiper/swiper-bundle.css';
+@import './variables';
+@import './navbar';
+@import './mixins';
+@import './banner';
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+
+.container{
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media (min-width: 778px) {
+	.container{
+		max-width: 1140px;
+	}
+}
+
+.swiper-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  img{
+  	width: 100%;
+  }
+}
+
+.s1 {
+	width: 100%;
+	height: 80vh;
+
+	.info_text {
+		color: white;
+
+		p {
+			// margin-bottom: 80px;
+		}
+
+		p:nth-child(1) {
+			font-size: 2rem;
+			text-align: center;
+		}
+
+		.title {
+			padding: 20px;
+			background: $primary;
+		}
+	}
+}

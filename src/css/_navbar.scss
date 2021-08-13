@@ -1,0 +1,40 @@
+@import './variables';
+@import './mixins';
+
+
+nav{
+	@include flexbox($direction: row);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 20px 100px;
+	width: 100%;
+	transition: 0.5s;
+	z-index: 10;
+
+
+	&.sticky{
+		padding: 0 90px;
+		background: white;
+
+		.navigation a {
+			color: $primary;
+		}
+	}
+
+	.navigation{
+		@include flexbox($direction: row);
+
+		a{
+			padding: 10px 25px;
+			color: white;
+			text-decoration: none;
+			transition: 0.5s;
+
+			&:hover{
+				color: white;
+				background: $primary;
+			}
+		}
+	}
+}
